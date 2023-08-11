@@ -52,12 +52,18 @@ conda install -c conda-forge ultralytics
 * Now you should be able to run YOLO on your desktop. Next we are going to install [Slicing Aided Hyper Inference(SAHI)](https://github.com/obss/sahi) by following the [Installation details](https://github.com/obss/sahi#installation).
 
 ## 2) Folder Management
-
 * Move Tree_Counting.ipynb, sdpr.pt and adds into ultralytics folder.
 
 ## 3) Execution
 * To execute Jupyter Notebook, you can run `jupyter notebook` in Anaconda Prompt terminal and it will open in one of the browser.
-* 
+* You may open the Tree Counting.ipynb file in Jupyter Notebook.
+* Make sure to change the name of the estate.
+* ![Screenshot 2023-08-11 142517](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/1f35e6ff-22c2-4325-ba83-41c074e1e49d)
+* The "source" variable is the directory to the Folder that contains IMG folder and in it is the grided image of the estate.
+* Then you may run the program by clicking Restart & Run All.
+* ![Screenshot 2023-08-11 111104](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/1855b82b-a7fc-41ef-8202-a7e32b038180)
+
+
   
 
 
