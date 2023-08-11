@@ -51,6 +51,13 @@ conda install -c conda-forge ultralytics
 
 * Now you should be able to run YOLO on your desktop. Next we are going to install [Slicing Aided Hyper Inference(SAHI)](https://github.com/obss/sahi) by following the [Installation details](https://github.com/obss/sahi#installation).
 
+## 2) Folder Management
+
+* Move Tree_Counting.ipynb, sdpr.pt and adds into ultralytics folder.
+
+## 3) Execution
+* To execute Jupyter Notebook, you can run `jupyter notebook` in Anaconda Prompt terminal and it will open in one of the browser.
 * 
+  
 
 
