@@ -7,7 +7,7 @@ Detect palm tree using YOLO V8 model and having .gpkj as the final output.
 * Make sure you have install PYTHON and [GIT](https://git-scm.com/downloads) on your computer.
 * Follow the step to install [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/) from the documentation.
 * Press WINDOWS button and find Anaconda Prompt.
-  ![image](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/f2b1fa0c-6222-4aea-98bb-ee6dd488298b)
+* ![Screenshot 2023-08-11 143325](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/9f7bd43a-53cd-4c6c-8fba-4f1c08c52054)
   
 * Check if you have install CUDA by running this line in the prompt.
 
@@ -63,6 +63,9 @@ conda install -c conda-forge ultralytics
 * Then you may run the program by clicking Restart & Run All.
 * ![Screenshot 2023-08-11 111104](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/1855b82b-a7fc-41ef-8202-a7e32b038180)
 
+* There should be two (2) new folder created in the source directory.
+* - predict
+  - GPKJ
 
   
 
