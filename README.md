@@ -55,12 +55,9 @@ conda install -c conda-forge ultralytics
 * In the palmtree_detection folder should contain
   - adds
   - image
-  - sdpr.pt
+  - sahi/sdpr.pt
   - README.md
   - Tree_Counting.ipynb
-  - ultralytics
-  
-* Move Tree_Counting.ipynb, sdpr.pt and adds into ultralytics folder.
 
 ## 3) Execution
 * To execute Jupyter Notebook, you can run `jupyter notebook` in Anaconda Prompt terminal and it will open in one of the browser.
