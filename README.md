@@ -50,7 +50,11 @@ conda install -c conda-forge ultralytics
 ```
 
 * Now you should be able to run YOLO on your desktop. Next we are going to install [Slicing Aided Hyper Inference(SAHI)](https://github.com/obss/sahi) by following the [Installation details](https://github.com/obss/sahi#installation).
+* Now to install the required library.
 
+```bash
+pip install -r requirements.txt
+```
 ## 2) Folder Management
 * In the palmtree_detection folder should contain
   - adds
