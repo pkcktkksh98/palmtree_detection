@@ -1,81 +1,120 @@
-# Palm Tree Detection
-Detect palm tree using YOLO V8 model and having .gpkj as the final output.
+# Tree Counting Detection Model
 
-## Step by step
+## Overview
+This guide provides step-by-step instructions for setting up, preparing data, and executing the tree-counting detection model.
 
-### 1) Installation requirement
-* Make sure you have install PYTHON and [GIT](https://git-scm.com/downloads) on your computer.
-* Follow the step to install [Anaconda](https://docs.anaconda.com/free/anaconda/install/windows/) from the documentation.
-* Press WINDOWS button and find Anaconda Prompt.
-* ![Screenshot 2023-08-11 143325](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/9f7bd43a-53cd-4c6c-8fba-4f1c08c52054)
+---
+
+## **Step 1: Set Up the Environment**
+
+### **1.1 Copy Project Files**
+Copy both folders from:
+```
+\Aeca_nas\gis\01_Projects\01_Clients\0020_PKPS\00_TreeCounting
+```
+to your local working directory.
+
+**Important:** Do **NOT** remove the `00_` annotation from the folder names.
+
+**Example Directory Structure:**
+```
+D:\Projects\00_PKPS\BADAK\IMG
+```
+
+### **1.2 Install Required Software**
+Ensure that the following software is installed on your system:
+
+- **Python**: Download and install the latest version from [python.org](https://www.python.org).
+- **Anaconda**: Manage Python packages and environments with Anaconda. Install it from [Anaconda Documentation](https://docs.anaconda.com/).
+
+#### **Check and Install Anaconda (if needed)**
+If unsure about your current Anaconda installation:
+1. Open **Settings** > **Apps** > **Installed Apps**.
+2. Search for **Anaconda3**.
+3. Uninstall any existing Anaconda versions.
+4. Download and install the latest Anaconda version.
+
+### **1.3 Create and Activate a Virtual Environment**
+Using **Anaconda Prompt**, set up a virtual environment to manage dependencies:
+
+1. **Create a new virtual environment:**
+   ```bash
+   conda create -n palmtree -y
+   ```
+2. **Activate the environment:**
+   ```bash
+   conda activate palmtree
+   ```
+
+### **1.4 Install Python Dependencies**
+#### **Using Setup Script**
+1. **Navigate to the repository directory**:
+   ```bash
+   D:
+   cd path/to/palmtree_detection
+   ```
+2. **Run the setup script**:
+   ```bash
+   setup.bat
+   ```
+   *This will install all required dependencies from `requirements.txt`.*
+
+---
+
+## **Step 2: Prepare the Data**
+
+### **2.1 Organize Input Images**
+Ensure that your input images are properly structured.  
+**Example Directory:**
+```
+D:\Projects\00_PKPS\BADAK\IMG
+```
+
+### **2.2 Preprocess Images**
+1. **Resize Large Images**:  
+   - Cut the image into smaller sizes.
+   - Recommended size: **40,000 × 40,000 pixels**.  
+   - If **Out Of Memory (OOM)** errors occur, reduce the size further.
   
-* Check if you have install CUDA by running this line in the prompt.
+2. **Save Images in the Correct Folder**:  
+   - Export the processed images into the **IMG** folder.
 
-```bash
-nvidia-smi
-```
+---
 
-```bash
-[OUTPUT]
+## **Step 3: Execute the Model**
 
-+---------------------------------------------------------------------------------------+
-| NVIDIA-SMI 535.98                 Driver Version: 535.98       CUDA Version: 12.2     |
-|-----------------------------------------+----------------------+----------------------+
-| GPU  Name                     TCC/WDDM  | Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
-|                                         |                      |               MIG M. |
-|=========================================+======================+======================|
-|   0  NVIDIA GeForce RTX 3080 Ti   WDDM  | 00000000:01:00.0  On |                  N/A |
-| 31%   59C    P2             208W / 400W |   2416MiB / 12288MiB |     54%      Default |
-|                                         |                      |                  N/A |
-+-----------------------------------------+----------------------+----------------------+
-```
-* If you did not get the output, you can go to this [link](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local). Once you have install, check the output again.
-* Then you may change to the desired directory.
+### **3.1 Run the Detection Script**
+1. **Open Anaconda Prompt**.
+2. **Navigate to your working directory**:
+   ```bash
+   D:
+   cd path/to/palmtree_detection
+   ```
+3. **Run the script**:
+   ```bash
+   python tree_counting.py
+   ```
+4. **Enter the Plantation Name (LADANG)** when prompted:
+   - Example input: `BADAK` (folder name that contains the `IMG` folder).
 
-```bash
-cd folder/directory
-```
-* Download this repository
-```bash
-git clone https://github.com/pkcktkksh98/palmtree_detection.git
-cd palmtree_detection
-```
+---
 
-* Download Yolo V8 repository [here](https://github.com/ultralytics/ultralytics.git) using `git clone`.
-* Now install ultralytics for Yolo V8 usage.
+### **3.2 Retrieve the Output (GPKJ File)**
+- The generated **GeoPackage (.gpkg)** file will be stored in the same directory as the **IMG** folder.
+- **Example Path:**
+  ```
+  D:\Projects\00_PKPS\BADAK\BADAK.gpkg
+  ```
 
-```bash
-conda install -c conda-forge ultralytics
-```
+---
 
-* Now you should be able to run YOLO on your desktop. Next we are going to install [Slicing Aided Hyper Inference(SAHI)](https://github.com/obss/sahi) by following the [Installation details](https://github.com/obss/sahi#installation).
-* Now to install the required library.
+## **Additional Notes**
+- Always verify that the **tree_counting.py** script is in the correct directory before execution.
+- If you encounter errors, ensure all dependencies are installed and re-run the **setup.bat** file.
 
-```bash
-pip install -r requirements.txt
-```
-## 2) Folder Management
-* In the palmtree_detection folder should contain
-  - adds
-  - image
-  - sahi/sdpr.pt
-  - README.md
-  - Tree_Counting.ipynb
+---
 
-## 3) Execution
-* To execute Jupyter Notebook, you can run `jupyter notebook` in Anaconda Prompt terminal and it will open in one of the browser.
-* You may open the Tree Counting.ipynb file in Jupyter Notebook.
-* Make sure to change the name of the estate.
-* ![Screenshot 2023-08-11 142517](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/1f35e6ff-22c2-4325-ba83-41c074e1e49d)
-* The "source" variable is the directory to the Folder that contains IMG folder and in it is the grided image of the estate.
-* Then you may run the program by clicking Restart & Run All.
-* ![Screenshot 2023-08-11 111104](https://github.com/pkcktkksh98/palmtree_detection/assets/71068962/1855b82b-a7fc-41ef-8202-a7e32b038180)
-
-* There should be two (2) new folder created in the source directory.
-  - predict
-  - GPKJ
-
-  
-
+**Author:** AECA Solutions  
+**Project:** Palm Tree Counting Detection Model  
+**Date:** March 2025
 
