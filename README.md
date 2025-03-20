@@ -114,7 +114,3 @@ D:\Projects\00_PKPS\BADAK\IMG
 
 ---
 
-**Author:** AECA Solutions  
-**Project:** Palm Tree Counting Detection Model  
-**Date:** March 2025
-
