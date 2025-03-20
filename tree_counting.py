@@ -1,7 +1,5 @@
 import os
 import time
-import pickle
-import subprocess
 from scripts.infer import print_tif_file_names
 from scripts.geopkg import gen_gpkj
 

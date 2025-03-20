@@ -80,11 +80,11 @@ def print_tif_file_names(folder_path,MODEL,oriPath,source):
                 #Move
                 #=========================================================================#
 
-                folder_path = source+'/predict'
-                destination_path = folder_path+"/"+IMG_NAME+'.txt'
+                pred_path = source+'/predict'
+                # destination_path = pred_path+"/"+IMG_NAME+'.txt'
 
-                create_folder(folder_path)
-                move_file(file_path, folder_path)
+                create_folder(pred_path)
+                move_file(file_path, pred_path)
                 
                 #=========================================================================#
                 #  Delete previous prediction folder(exp)
