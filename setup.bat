@@ -1,7 +1,5 @@
-@echo off
-echo Activating Conda base environment...
-call conda activate
 
+@echo off
 echo Installing Ultralytics...
 pip install ultralytics
 
