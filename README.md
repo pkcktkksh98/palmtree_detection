@@ -53,7 +53,7 @@ Using **Anaconda Prompt**, set up a virtual environment to manage dependencies:
    D:
    cd path/to/palmtree_detection
    ```
-2. **Run the setup script**:
+2. **Run the setup script on Conda environment**:
    ```bash
    setup.bat
    ```
