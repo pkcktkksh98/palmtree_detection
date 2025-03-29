@@ -18,7 +18,7 @@ to your local working directory.
 
 **Example Directory Structure:**
 ```
-D:\Projects\00_PKPS\BADAK\IMG
+D:\Projects\00_projek\BADAK\IMG
 ```
 
 ### **1.2 Install Required Software**
@@ -67,7 +67,7 @@ Using **Anaconda Prompt**, set up a virtual environment to manage dependencies:
 Ensure that your input images are properly structured.  
 **Example Directory:**
 ```
-D:\Projects\00_PKPS\BADAK\IMG
+D:\Projects\00_projek\BADAK\IMG
 ```
 
 ### **2.2 Preprocess Images**
@@ -103,7 +103,7 @@ D:\Projects\00_PKPS\BADAK\IMG
 - The generated **GeoPackage (.gpkg)** file will be stored in the same directory as the **IMG** folder.
 - **Example Path:**
   ```
-  D:\Projects\00_PKPS\BADAK\BADAK.gpkg
+  D:\Projects\00_project\BADAK\BADAK.gpkg
   ```
 
 ---
