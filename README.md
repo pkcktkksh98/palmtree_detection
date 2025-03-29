@@ -67,7 +67,7 @@ Using **Anaconda Prompt**, set up a virtual environment to manage dependencies:
 Ensure that your input images are properly structured.  
 **Example Directory:**
 ```
-D:\Projects\00_projek\BADAK\IMG
+D:\Projects\00_project\BADAK\IMG
 ```
 
 ### **2.2 Preprocess Images**
